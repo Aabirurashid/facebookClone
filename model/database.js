@@ -33,7 +33,7 @@ knex.schema.createTable("friendlist", function (t) {
 //requests
 knex.schema.createTable("requests", function (t) {
   t.integer("user_id").unsigned().references("users.user_id");
-  t.integer("friend_id").unsigned().references("friendlist.user_id");;
+  t.integer("friend_id").unsigned().references("users.user_id");;
 }).then(()=>{
   console.log("table created")
 }).catch(()=>{

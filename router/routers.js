@@ -7,7 +7,10 @@ const { signup, login }=require('../controllers/registration')
 
 router.post('/signup',signup)
 router.post('/login',login)
+
 const { friendlist, get_all_requests, delete_friend_id }=require('../controllers/friendlist')
+
+
 router.post('/friendlist',friendlist)
 router.get('/allrequsts',get_all_requests)
 router.delete('/friendid/:friend_id',delete_friend_id)
